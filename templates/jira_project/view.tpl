@@ -90,6 +90,12 @@
 						{$result.$column|devblocks_prettytime}&nbsp;
 					{/if}
 				</td>
+			{elseif $column=="j_is_sync"}
+				<td>
+					{if $result.j_is_sync}
+						<span class="cerb-sprite2 sprite-tick-circle-gray"></span>
+					{/if}
+				</td>
 			{else}
 				<td>{$result.$column}</td>
 			{/if}

@@ -120,6 +120,7 @@ abstract class AbstractEvent_JiraProject extends Extension_DevblocksEvent {
 		$types = array(
 			'project_jira_key' => Model_CustomField::TYPE_SINGLE_LINE,
 			'project_last_synced_at' => Model_CustomField::TYPE_DATE,
+			'project_is_sync' => Model_CustomField::TYPE_CHECKBOX,
 			'project_name' => Model_CustomField::TYPE_SINGLE_LINE,
 			'project_record_url' => Model_CustomField::TYPE_URL,
 			'project_url' => Model_CustomField::TYPE_URL,

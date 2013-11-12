@@ -18,6 +18,7 @@ if(!isset($tables['jira_project'])) {
 			statuses_json MEDIUMTEXT,
 			versions_json MEDIUMTEXT,
 			last_synced_at INT UNSIGNED NOT NULL DEFAULT 0,
+			is_sync TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 			PRIMARY KEY (id)
 		) ENGINE=%s;
 	", APP_DB_ENGINE);
@@ -43,6 +44,10 @@ if(isset($columns['statuses_json']) && $columns['statuses_json']['type'] == 'tex
 
 if(isset($columns['versions_json']) && $columns['versions_json']['type'] == 'text') {
 	$db->Execute("ALTER TABLE jira_project MODIFY COLUMN versions_json MEDIUMTEXT");
+}
+
+if(!isset($columns['is_sync'])) {
+	$db->Execute("ALTER TABLE jira_project ADD COLUMN is_sync TINYINT(1) UNSIGNED NOT NULL DEFAULT 0");
 }
 
 // ===========================================================================

@@ -197,6 +197,7 @@ abstract class AbstractEvent_JiraIssue extends Extension_DevblocksEvent {
 			
 			'issue_project_jira_key' => Model_CustomField::TYPE_SINGLE_LINE,
 			'issue_project_last_synced_at' => Model_CustomField::TYPE_DATE,
+			'issue_project_is_sync' => Model_CustomField::TYPE_CHECKBOX,
 			'issue_project_name' => Model_CustomField::TYPE_SINGLE_LINE,
 			'issue_project_record_url' => Model_CustomField::TYPE_URL,
 			'issue_project_url' => Model_CustomField::TYPE_URL,
